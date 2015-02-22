@@ -1,0 +1,40 @@
+
+
+<h1>Tweets</h1>
+
+
+<p> 
+logged in as <%= current_user.name %> 
+<%= link_to('[Logout]', destroy_user_session_path, :method => :delete) %>        
+</p>
+
+<div class = 'tweetbox'>
+  <div class = 'tweet_indented'>
+  <%= simple_form_for Tweet.new do |f| %>
+    <%= f.input :body, label: false %></br>
+    <div class = 'indented'>
+      <%= f.button :submit, 'Tweet!' %> <!--sends to Tweets#create?-->
+    </div>
+  <% end %>
+  </div>
+</div>
+</br>
+
+<% @tweets.each do |t| %>
+  <div class = 'boxed'>
+  <tr>
+    <h3><%= t.name %> says:</h3>
+    <td><%= t.body %></td>
+    </br>
+    </br>
+    </br>
+  <div class = 'indented'>
+    Posted <%= time_ago_in_words(t.created_at) %> ago.
+  </div>
+    </br>
+    </br>
+  </tr>
+  </div>
+<% end %>
+
+

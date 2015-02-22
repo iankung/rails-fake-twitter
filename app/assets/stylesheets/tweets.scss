@@ -1,0 +1,38 @@
+// Place all the styles related to the Tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.form-inline div { display: inline-block }
+
+
+.tweetbox {
+  background-color: #FF9933;
+  width: 350px;
+  padding: 3px;
+  border: 1px solid lightblue;
+  border-radius: 20px;
+  margin: 5px;
+  line-height: 10px;
+
+}
+
+
+.boxed {
+  background-color: lightblue;
+  width: 350px;
+  padding: 3px;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  margin: 5px;
+  line-height: 10px;
+}
+
+.indented{
+  text-indent: 150px;
+}
+
+.tweet_indented{
+  text-indent: 90px;
+}
